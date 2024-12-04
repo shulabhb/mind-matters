@@ -56,19 +56,19 @@
               title="Mood Tracker"
               description="Log your mood and track your mental health."
               route="/mood-tracker"
-              image="../src/assets/moodTracker.png"
+              image="@/src/assets/moodTracker.png"
             />
             <dashboard-card
               title="Mood History"
               description="View your past mood history patterns."
               route="/mood-history"
-              image="../src/assets/moodHistory.png"
+              image="@/src/assets/moodHistory.png"
             />
             <dashboard-card
               title="Explore Resources"
               description="Discover mental health articles, exercises, and support."
               route="/resources"
-              image="../src/assets/resources.png"
+              image="@/src/assets/resources.png"
             />
           </div>
         </div>
