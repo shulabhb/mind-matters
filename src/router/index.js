@@ -1,9 +1,9 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import { getAuth } from "firebase/auth";
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL), //Hasmode to properly handle web directing without any server config for deploying in vercel
+  history: createWebHistory(import.meta.env.BASE_URL), //Hasmode to properly handle web directing without any server config for deploying in vercel
   routes: [
     {
       path: "/",
