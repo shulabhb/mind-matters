@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import { getAuth } from "firebase/auth";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL), //Hasmode to properly handle web directing without any server config for deploying in vercel
   routes: [
     {
       path: "/",
@@ -58,6 +58,8 @@ const router = createRouter({
 });
 
 // Navigation guard for protected routes
+// I had to come up with this solution to prevent loggedout users from logging in and preventing loggedin 
+// useres from going to loggedout pages when directing to the loggedin home instead of loggedout home.
 router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
   const auth = getAuth();
